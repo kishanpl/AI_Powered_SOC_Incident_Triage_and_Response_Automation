@@ -6,6 +6,7 @@ Team: Herath H.M.T.B | Hettiarachchi H.A.K.G | Fernando N.D.H | [Member 4]
 
 import streamlit as st
 import pandas as pd
+import io
 import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime
@@ -98,7 +99,7 @@ with st.sidebar:
 # ── Process logs through AI pipeline ─────────────────────────────────────────
 @st.cache_data
 def process_logs(df_json: str, filter_lvl: str):
-    df = pd.read_json(df_json)
+    df = pd.read_json(io.StringIO(df_json))
     results = []
     for _, row in df.iterrows():
         features = extract_features(row)
