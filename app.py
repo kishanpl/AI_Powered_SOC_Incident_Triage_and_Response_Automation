@@ -1,6 +1,6 @@
 """
 AI-Powered SOC Analyst Assistant Dashboard
-EC6301 Mini Project
+SOC AI Project
 Team: Herath H.M.T.B | Hettiarachchi H.A.K.G | Fernando N.D.H | [Member 4]
 """
 
@@ -94,7 +94,7 @@ with st.sidebar:
             st.success(f"Loaded {len(df_raw)} records")
 
     st.markdown("---")
-    st.caption("EC6301 Mini Project | 2026")
+    st.caption("SOC AI Project | 2026")
 
 # ── Process logs through AI pipeline ─────────────────────────────────────────
 @st.cache_data
